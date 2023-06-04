@@ -101,10 +101,10 @@
 //! println!("Read {} records.", record_batch.num_rows());
 //! ```
 
-experimental!(mod array_reader);
+pub mod array_reader;
 pub mod arrow_reader;
 pub mod arrow_writer;
-mod buffer;
+pub(crate) mod buffer;
 mod decoder;
 
 #[cfg(feature = "async")]

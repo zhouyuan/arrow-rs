@@ -115,7 +115,7 @@ pub type ColumnReaderImpl<T> = GenericColumnReader<
 pub struct GenericColumnReader<R, D, V> {
     descr: ColumnDescPtr,
 
-    page_reader: Box<dyn PageReader>,
+    pub(crate) page_reader: Box<dyn PageReader>,
 
     /// The total number of values stored in the data page.
     num_buffered_values: usize,

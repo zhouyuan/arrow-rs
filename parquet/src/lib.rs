@@ -88,3 +88,7 @@ pub mod bloom_filter;
 pub mod file;
 pub mod record;
 pub mod schema;
+
+#[cfg(feature = "arrow")]
+#[cfg(feature = "async")]
+pub mod blaze;
